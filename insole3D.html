@@ -29,13 +29,13 @@
 			}
 
             .change-insole-item:first-of-type {
-                background-image: url('./assets/c01');
+                background-image: url('./assets/c01.png');
             }
             .change-insole-item:nth-of-type(2) {
-                background-image: url('./assets/c02');
+                background-image: url('./assets/c02.png');
             }
             .change-insole-item:nth-of-type(3) {
-                background-image: url('./assets/c03');
+                background-image: url('./assets/c03.png');
             }
             /*
             .change-insole-item:nth-of-type(4) {
@@ -58,6 +58,9 @@
 
 		<div id="container">
             <div class="change-insole">
+                <div class="change-insole-item" onclick="test(1)"></div>
+                <div class="change-insole-item" onclick="test(2)"></div>
+                <div class="change-insole-item" onclick="test(3)"></div>
             </div>
 			
 		</div>
@@ -83,7 +86,7 @@
 
 				container = document.getElementById( 'container' );
 
-				camera = new THREE.PerspectiveCamera( 15, window.innerWidth / window.innerHeight, 1, 1000000 );
+				camera = new THREE.PerspectiveCamera( 1.6, window.innerWidth / window.innerHeight, 1, 1000000 );
 				camera.position.set( 15, 10, -15 );
                 camera.lookAt(0, 0, 0);
 				scene = new THREE.Scene();
@@ -92,7 +95,7 @@
 
                 // 鞋垫
 				var loader = new THREE.ColladaLoader();
-				loader.load( './assets/model01.dae', function ( collada ) {
+				loader.load( './assets/model04.dae', function ( collada ) {
 					console.log(collada);
 					var animations = collada.animations;
 					var avatar = collada.scene;
