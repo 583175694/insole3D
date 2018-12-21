@@ -86,7 +86,7 @@
 
 				container = document.getElementById( 'container' );
 
-				camera = new THREE.PerspectiveCamera( 1.6, window.innerWidth / window.innerHeight, 1, 1000000 );
+				camera = new THREE.PerspectiveCamera( 14, window.innerWidth / window.innerHeight, 1, 1000000 );
 				camera.position.set( 15, 10, -15 );
                 camera.lookAt(0, 0, 0);
 				scene = new THREE.Scene();
@@ -95,7 +95,7 @@
 
                 // 鞋垫
 				var loader = new THREE.ColladaLoader();
-				loader.load( './assets/model04.dae', function ( collada ) {
+				loader.load( './assets/model01.dae', function ( collada ) {
 					console.log(collada);
 					var animations = collada.animations;
 					var avatar = collada.scene;
